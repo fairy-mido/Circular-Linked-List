@@ -137,9 +137,9 @@ int insert_node() // Insert any node at any specific required position
         new_node->next = new_node; // Here the Circulation Happens
         head = tail = new_node;
         // Testing
-        printf("Tail %d\n", tail);
-        printf("Affirmation Tail %d\n", head);
-        printf("Affrimation Head %d\n", tail->next);
+        // printf("Tail %d\n", tail);
+        // printf("Affirmation Tail %d\n", head);
+        // printf("Affrimation Head %d\n", tail->next);
         printf("Head %d\n", head);
         // End of Testing
         printf("Data %d and ID %d\n", new_node->data, new_node->id);
@@ -170,26 +170,20 @@ int insert_node() // Insert any node at any specific required position
             new_node->data = user_data;
             new_node->id = user_id;
             // new_node->next = NULL;
-            printf("Ended Here\n");
             prev_node = head;
-            printf("Ended Here\n");
             while (prev_node->next != (tail->next)) // Transverse the list till the end pos with the help of tail pointer :>
             {
                 prev_node = prev_node->next; // Incrementing..
             }
-            printf("Ended Here\n");
             prev_node->next = new_node;
-            printf("Ended Here\n");
             new_node->next = head;
-            printf("Ended Here\n");
             tail = new_node;
-            printf("Ended Here\n");
 
             // Tesing
-            printf("Tail %d\n", tail);
-            printf("Affirmation Tail %d\n", new_node);
-            printf("Affrimation Head %d\n", tail->next);
-            printf("Head %d\n", head);
+            // printf("Tail %d\n", tail);
+            // printf("Affirmation Tail %d\n", new_node);
+            // printf("Affrimation Head %d\n", tail->next);
+            // printf("Head %d\n", head);
             // End of Testing
 
             printf("Data %d and ID %d\n", new_node->data, new_node->id);
@@ -218,13 +212,13 @@ int insert_node() // Insert any node at any specific required position
             tail->next = current_node;
 
             // Testing
-            printf("Tail %d\n", tail);
-            printf("Head %d\n", head);
-            printf("Affrimation Head %d\n", tail->next);
+            // printf("Tail %d\n", tail);
+            // printf("Head %d\n", head);
+            // printf("Affrimation Head %d\n", tail->next);
             // End of Testing
 
-            printf("%d\n", head->data);
-            printf("%d\n", tail->next->data);
+            // printf("%d\n", head->data);
+            // printf("%d\n", tail->next->data);
             printf("Node has successfully been added!\n");
             printf("--------------------------------------------------\n");
         }
@@ -318,9 +312,9 @@ int delete_node()
                 tail = prev_node;
 
                 // Testing
-                printf("Tail %d\n", tail);
-                printf("Head %d\n", head);
-                printf("Affrmation Tail %d\n", tail->next);
+                // printf("Tail %d\n", tail);
+                // printf("Head %d\n", head);
+                // printf("Affrmation Tail %d\n", tail->next);
                 // End of Testing
 
                 free(current_node); // Deleted the node
@@ -348,9 +342,9 @@ int delete_node()
                     head = head->next;
                     tail->next = head;
                     // Testing
-                    printf("Tail %d\n", tail);
-                    printf("Head %d\n", head);
-                    printf("Affrmation Tail %d\n", tail->next);
+                    // printf("Tail %d\n", tail);
+                    // printf("Head %d\n", head);
+                    // printf("Affrmation Tail %d\n", tail->next);
                     // End of Testing
                     free(current_node);
                     printf("Node has successfully been deleted!\n");
@@ -375,9 +369,9 @@ int delete_node()
                 current_node->next = NULL;
                 
                 // Testing
-                printf("Tail %d\n",tail);
-                printf("Head %d\n",head);
-                printf("Affrmation Tail %d\n",tail -> next);
+                // printf("Tail %d\n",tail);
+                // printf("Head %d\n",head);
+                // printf("Affrmation Tail %d\n",tail -> next);
                 // End of Testing
 
                 free(current_node); // Deleted the Desired Node
